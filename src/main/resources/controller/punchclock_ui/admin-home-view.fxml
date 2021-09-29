@@ -11,4 +11,6 @@
             fx:controller="controller.punchclock_ui.AdminHomeController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Button prefHeight="100" prefWidth="100" layoutX="50" layoutY="50">Create User</Button>
+
 </AnchorPane>
