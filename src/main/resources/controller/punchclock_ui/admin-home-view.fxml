@@ -19,5 +19,6 @@
     <Button prefHeight="100" prefWidth="100" layoutX="50" layoutY="200">Show User</Button>
     <Button prefHeight="100" prefWidth="100" layoutX="200" layoutY="200">Show Categories</Button>
     <Button prefHeight="100" prefWidth="100" layoutX="350" layoutY="200">Show Roles</Button>
+    <Button prefHeight="100" prefWidth="100" layoutX="500" layoutY="200">Log Out</Button>
 
 </AnchorPane>
