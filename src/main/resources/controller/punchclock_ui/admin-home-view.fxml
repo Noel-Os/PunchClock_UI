@@ -16,4 +16,6 @@
     <Button prefHeight="100" prefWidth="100" layoutX="350" layoutY="50">Create Role</Button>
     <Button prefHeight="100" prefWidth="100" layoutX="500" layoutY="50">Create Entry</Button>
 
+    <Button prefHeight="100" prefWidth="100" layoutX="50" layoutY="200">Edit User</Button>
+
 </AnchorPane>
