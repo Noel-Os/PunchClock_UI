@@ -12,5 +12,6 @@
             prefHeight="350.0" prefWidth="650.0">
 
     <Button prefWidth="100" prefHeight="100" layoutY="125" layoutX="100">Create Entry</Button>
+    <Button prefWidth="100" prefHeight="100" layoutY="125" layoutX="450">Log Out</Button>
 
 </AnchorPane>
