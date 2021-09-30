@@ -76,6 +76,13 @@ public class CreateUserController {
 
     public void create(ActionEvent actionEvent) throws IOException {
 
+        JSONObject jObject = new JSONObject();
+        jObject.put("password", pw.getText());
+        jObject.put("username", username.getText());
+
+        URL url = new URL("http://localhost:8080/auth/login");
+
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
     }
 
