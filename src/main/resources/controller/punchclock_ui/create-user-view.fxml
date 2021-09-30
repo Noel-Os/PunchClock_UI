@@ -15,5 +15,6 @@
     <TextField fx:id="pw" promptText="Password" prefHeight="20" prefWidth="150" layoutX="250" layoutY="100"></TextField>
     <ComboBox fx:id="role" promptText="role" prefHeight="20" prefWidth="150" layoutX="250" layoutY="150"></ComboBox>
     <Button onAction="#create" prefHeight="20" prefWidth="150" layoutX="250" layoutY="200">Create User</Button>
+    <Button onAction="#back" prefHeight="20" prefWidth="150" layoutX="250" layoutY="250">Back</Button>
 
 </AnchorPane>
