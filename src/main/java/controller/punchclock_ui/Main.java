@@ -2,6 +2,7 @@ package controller.punchclock_ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -29,6 +30,13 @@ public class Main extends Application {
             this.primaryStage.setScene(scene);
             this.primaryStage.show();
 
+        }
+
+        public void toAdminHome() throws IOException {
+            Parent root = FXMLLoader.load(getClass().getResource("admin-home-view.fxml"));
+            this.primaryStage.setScene(new Scene(root, 300, 275));
+            this.primaryStage.setTitle("Login");
+            this.primaryStage.show();
         }
 
     public static void main(String[] args) {
