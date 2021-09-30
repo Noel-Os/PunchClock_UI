@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class CreateUserController {
 
     @FXML
@@ -21,7 +23,7 @@ public class CreateUserController {
 
     }
 
-    public void back(ActionEvent actionEvent) {
-
+    public void back(ActionEvent actionEvent) throws IOException {
+        Main.getInstance().toAdminHome();
     }
 }
