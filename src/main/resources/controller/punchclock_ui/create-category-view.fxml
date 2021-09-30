@@ -13,5 +13,6 @@
 
     <TextField fx:id="catName" prefHeight="20" prefWidth="150" layoutY="100" layoutX="225"></TextField>
     <Button onAction="#create" prefHeight="20" prefWidth="150" layoutY="150" layoutX="225">Create Category</Button>
+    <Button onAction="#back" prefHeight="20" prefWidth="150" layoutY="200" layoutX="225">Back</Button>
 
 </AnchorPane>
