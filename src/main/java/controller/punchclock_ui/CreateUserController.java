@@ -8,4 +8,7 @@ public class CreateUserController {
     @FXML
     TextField username;
 
+    @FXML
+    TextField pw;
+
 }
