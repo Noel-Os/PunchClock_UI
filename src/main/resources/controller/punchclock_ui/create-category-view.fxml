@@ -8,9 +8,10 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.punchclock_ui.CreateUserController"
+            fx:controller="controller.punchclock_ui.CreateCategoryController"
             prefHeight="350.0" prefWidth="650.0">
 
     <TextField fx:id="catName" prefHeight="20" prefWidth="150" layoutY="100" layoutX="225"></TextField>
+    <Button onAction="#create" prefHeight="20" prefWidth="150" layoutY="150" layoutX="225">Create Category</Button>
 
 </AnchorPane>
