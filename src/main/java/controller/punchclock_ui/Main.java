@@ -53,6 +53,12 @@ public class Main extends Application {
             this.primaryStage.show();
         }
 
+        public void toLogin() throws IOException {
+            Parent root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+            this.primaryStage.setScene(new Scene(root, 650, 350));
+            this.primaryStage.setTitle("Home");
+            this.primaryStage.show();
+        }
     public static void main(String[] args) {
         launch();
     }

@@ -36,8 +36,6 @@ public class CreateRoleController {
             os.flush();
             os.close();
 
-            System.out.println(con.getResponseCode());
-
         } catch (Exception e) {
 
         }

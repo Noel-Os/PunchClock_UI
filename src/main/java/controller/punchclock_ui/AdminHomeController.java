@@ -13,4 +13,8 @@ public class AdminHomeController {
     public void toCreateRole(ActionEvent actionEvent) throws IOException {
         Main.getInstance().toCreateRole();
     }
+
+    public void logout(ActionEvent actionEvent) throws IOException {
+        Main.getInstance().toLogin();
+    }
 }
