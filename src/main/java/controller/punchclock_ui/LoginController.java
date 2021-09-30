@@ -45,5 +45,7 @@ public class LoginController {
 
         System.out.println(con.getResponseCode());
 
+        Main.getInstance().toAdminHome();
+
     }
 }

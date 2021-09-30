@@ -35,7 +35,7 @@ public class Main extends Application {
         public void toAdminHome() throws IOException {
             Parent root = FXMLLoader.load(getClass().getResource("admin-home-view.fxml"));
             this.primaryStage.setScene(new Scene(root, 300, 275));
-            this.primaryStage.setTitle("Login");
+            this.primaryStage.setTitle("Home");
             this.primaryStage.show();
         }
 
