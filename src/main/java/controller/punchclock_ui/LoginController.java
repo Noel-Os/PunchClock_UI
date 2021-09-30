@@ -34,29 +34,34 @@ public class LoginController {
         URL url = new URL("http://localhost:8080/auth/login");
 
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod("POST");
-        con.setRequestProperty("Content-Type", "application/json");
-
-        con.setDoOutput(true);
-        OutputStream os = con.getOutputStream();
-        os.write(jObject.toString().getBytes());
-        os.flush();
-        os.close();
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(
-                        con.getInputStream()));
-        String inputLine;
 
         String tokenJSON = "";
-        while ((inputLine = in.readLine()) != null) {
-            tokenJSON = inputLine;
+        try {
+            con.setRequestMethod("POST");
+            con.setRequestProperty("Content-Type", "application/json");
+
+            con.setDoOutput(true);
+            OutputStream os = con.getOutputStream();
+            os.write(jObject.toString().getBytes());
+            os.flush();
+            os.close();
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(
+                            con.getInputStream()));
+            String inputLine;
+
+            while ((inputLine = in.readLine()) != null) {
+                tokenJSON = inputLine;
+            }
+            in.close();
+        } catch (Exception e) {
+
         }
-        in.close();
 
         if (con.getResponseCode() == 200) {
             Main.getInstance().toAdminHome();
         } else {
-
+            wrong.setVisible(true);
         }
     }
 }
