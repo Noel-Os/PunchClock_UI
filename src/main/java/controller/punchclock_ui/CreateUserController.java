@@ -20,4 +20,8 @@ public class CreateUserController {
     public void create(ActionEvent actionEvent) {
 
     }
+
+    public void back(ActionEvent actionEvent) {
+
+    }
 }
