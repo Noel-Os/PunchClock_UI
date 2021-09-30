@@ -12,7 +12,7 @@
             prefHeight="350.0" prefWidth="650.0">
 
     <TextField fx:id="username" promptText="Username" prefHeight="20" prefWidth="150" layoutX="250" layoutY="50"></TextField>
-    <TextField promptText="Password" prefHeight="20" prefWidth="150" layoutX="250" layoutY="100"></TextField>
+    <TextField fx:id="pw" promptText="Password" prefHeight="20" prefWidth="150" layoutX="250" layoutY="100"></TextField>
     <ComboBox promptText="role" prefHeight="20" prefWidth="150" layoutX="250" layoutY="150"></ComboBox>
 
 </AnchorPane>
