@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-
     private Stage primaryStage;
 
     private static Main instance;
@@ -50,4 +49,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }
