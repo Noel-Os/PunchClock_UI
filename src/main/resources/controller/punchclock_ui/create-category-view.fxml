@@ -11,6 +11,6 @@
             fx:controller="controller.punchclock_ui.CreateUserController"
             prefHeight="350.0" prefWidth="650.0">
 
-
+    <TextField fx:id="catName" prefHeight="20" prefWidth="150" layoutY="100" layoutX="225"></TextField>
 
 </AnchorPane>
