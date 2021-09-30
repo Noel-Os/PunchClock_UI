@@ -13,5 +13,6 @@
 
     <TextField promptText="Username" prefHeight="20" prefWidth="150" layoutX="250" layoutY="50"></TextField>
     <TextField promptText="Password" prefHeight="20" prefWidth="150" layoutX="250" layoutY="100"></TextField>
+    <ComboBox promptText="role" prefHeight="20" prefWidth="150" layoutX="250" layoutY="150"></ComboBox>
 
 </AnchorPane>
