@@ -13,6 +13,10 @@ public class Main extends Application {
 
     private static Main instance;
 
+    public static Main getInstance() {
+        return instance;
+    }
+
         @Override
         public void start(Stage stage) throws IOException {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login-view.fxml"));
