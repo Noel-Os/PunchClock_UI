@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.punchclock_ui.LoginController">
+   <children>
+      <TextField fx:id="username" layoutX="225.0" layoutY="96.0" prefHeight="20" prefWidth="150" promptText="Username" />
+      <PasswordField fx:id="password" layoutX="225.0" layoutY="159.0" prefHeight="20" prefWidth="150" promptText="Password" />
+      <Button layoutX="225.0" layoutY="289.0" mnemonicParsing="false" onAction="#Login" prefHeight="20" prefWidth="150" text="Login" />
+      <Label fx:id="wrong" layoutX="225.0" layoutY="200" textFill="RED" visible="false">Eingabedaten sind falsch</Label>
+   </children>
+</AnchorPane>

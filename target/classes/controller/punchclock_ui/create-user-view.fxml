@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.punchclock_ui.CreateUserController"
+            prefHeight="350.0" prefWidth="650.0">
+
+    <TextField fx:id="username" promptText="Username" prefHeight="20" prefWidth="150" layoutX="250" layoutY="50"></TextField>
+    <TextField fx:id="pw" promptText="Password" prefHeight="20" prefWidth="150" layoutX="250" layoutY="100"></TextField>
+    <ComboBox fx:id="role" promptText="role" prefHeight="20" prefWidth="150" layoutX="250" layoutY="150"></ComboBox>
+    <Button onAction="#create" prefHeight="20" prefWidth="150" layoutX="250" layoutY="200">Create User</Button>
+    <Button onAction="#back" prefHeight="20" prefWidth="150" layoutX="250" layoutY="250">Back</Button>
+
+</AnchorPane>
