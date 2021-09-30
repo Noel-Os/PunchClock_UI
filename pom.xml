@@ -66,7 +66,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>controller.punchclock_ui/controller.punchclock_ui.HelloApplication</mainClass>
+                            <mainClass>controller.punchclock_ui/controller.punchclock_ui.Main</mainClass>
                         </configuration>
                     </execution>
                 </executions>
