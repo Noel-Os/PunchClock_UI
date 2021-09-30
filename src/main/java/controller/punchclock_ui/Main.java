@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
+    private Stage primaryStage;
 
         @Override
         public void start(Stage stage) throws IOException {
