@@ -2,6 +2,7 @@ package controller.punchclock_ui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.json.simple.JSONObject;
@@ -20,6 +21,9 @@ public class LoginController {
 
     @FXML
     PasswordField password;
+
+    @FXML
+    Label wrong;
 
     public void Login(ActionEvent actionEvent) throws IOException {
 
