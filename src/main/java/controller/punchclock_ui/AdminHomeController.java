@@ -9,4 +9,8 @@ public class AdminHomeController {
     public void toCreateUser(ActionEvent actionEvent) throws IOException {
         Main.getInstance().toCreateUser();
     }
+
+    public void toCreateRole(ActionEvent actionEvent) throws IOException {
+        Main.getInstance().toCreateRole();
+    }
 }

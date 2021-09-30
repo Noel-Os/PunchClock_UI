@@ -42,12 +42,20 @@ public class Main extends Application {
         public void toCreateUser() throws IOException {
             Parent root = FXMLLoader.load(getClass().getResource("create-user-view.fxml"));
             this.primaryStage.setScene(new Scene(root, 650, 350));
-            this.primaryStage.setTitle("Home");
+            this.primaryStage.setTitle("Create User");
+            this.primaryStage.show();
+        }
+
+        public void toCreateRole() throws IOException {
+            Parent root = FXMLLoader.load(getClass().getResource("create-role-view.fxml"));
+            this.primaryStage.setScene(new Scene(root, 650, 350));
+            this.primaryStage.setTitle("Create Role");
             this.primaryStage.show();
         }
 
     public static void main(String[] args) {
         launch();
     }
+
 
 }

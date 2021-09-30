@@ -7,13 +7,13 @@ import javafx.scene.control.TextField;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -74,15 +74,73 @@ public class CreateUserController {
 
     }
 
-    public void create(ActionEvent actionEvent) throws IOException {
+    public void create(ActionEvent actionEvent) throws IOException, ParseException {
+
+        long id = 0;
+
+        for (int i = 0; i <= role.getItems().size() - 1; i++){
+            if (role.getValue() == role.getItems().get(i)){
+                id = i;
+            }
+        }
 
         JSONObject jObject = new JSONObject();
         jObject.put("password", pw.getText());
+        jObject.put("role", getRole(id));
         jObject.put("username", username.getText());
 
-        URL url = new URL("http://localhost:8080/auth/login");
+        URL url = new URL("http://localhost:8080/roles");
 
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
+
+        try {
+            con.setRequestMethod("POST");
+            con.setRequestProperty("Content-Type", "application/json");
+
+            con.setDoOutput(true);
+            OutputStream os = con.getOutputStream();
+            os.write(jObject.toString().getBytes());
+            os.flush();
+            os.close();
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(
+                            con.getInputStream()));
+
+            in.close();
+        } catch (Exception e) {
+
+        }
+        System.out.println(jObject.toString());
+        System.out.println(con.getResponseCode());
+    }
+
+    public JSONObject getRole(long id) throws IOException, ParseException {
+        URL url = new URL("http://localhost:8080/roles/" + id);
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.connect();
+
+        int responsecode = conn.getResponseCode();
+
+        if (responsecode > 204) {
+            throw new RuntimeException("HttpResponseCode: " + responsecode);
+        } else {
+
+            String inline = "";
+            Scanner scanner = new Scanner(url.openStream());
+
+            while (scanner.hasNext()) {
+                inline += scanner.nextLine();
+            }
+
+            scanner.close();
+
+            JSONParser parse = new JSONParser();
+            JSONObject data_obj = (JSONObject) parse.parse(inline);
+
+            return data_obj;
+        }
 
     }
 
